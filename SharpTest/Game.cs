@@ -1,4 +1,5 @@
 ﻿using SharpDX;
+using SharpDX.D3DCompiler;
 using SharpDX.Direct3D;
 using SharpDX.DXGI;
 using SharpDX.Windows;
@@ -14,8 +15,9 @@ namespace SharpTest
 {
     public class Game : IDisposable
     {
-        private RenderForm renderForm;
 
+
+        private RenderForm renderForm;
         private const int Width = 1280;
         private const int Height = 720;
 
@@ -23,8 +25,11 @@ namespace SharpTest
         private D3D11.DeviceContext d3dDeviceContext;
         private SwapChain swapChain;
         private D3D11.RenderTargetView renderTargetView;
+        private D3D11.VertexShader vertexShader;
+        private D3D11.PixelShader pixelShader;
 
-
+        private Vector3[] vertices = new Vector3[] { new Vector3(-0.5f, 0.5f, 0.0f), new Vector3(0.5f, 0.5f, 0.0f), new Vector3(0.0f, -0.5f, 0.0f) };
+        private D3D11.Buffer triVertexBuffer;
 
         public Game()
         {
@@ -33,9 +38,10 @@ namespace SharpTest
             renderForm.AllowUserResizing = false;
 
             InitializeDeviceResources();
+            InitTriangle();
         }
-
-
+        
+        #region Direct3DInit
         //render game loop
         public void Run() {
             RenderLoop.Run(renderForm, RenderCallback);
@@ -94,7 +100,6 @@ namespace SharpTest
             swapChain.Present(1, PresentFlags.None);
         }
 
-
         // dispose unused objects
         public void Dispose()
         {
@@ -103,8 +108,36 @@ namespace SharpTest
             d3dDevice.Dispose();
             d3dDeviceContext.Dispose();
             renderForm.Dispose();
+            triVertexBuffer.Dispose();
+        }
+        #endregion
+
+
+        //initialize trinagle
+        private void InitTriangle() {
+            triVertexBuffer = D3D11.Buffer.Create<Vector3>(d3dDevice, D3D11.BindFlags.VertexBuffer, vertices);
         }
 
+        //compiling shaders...
+        private void InitializeShaders()
+        {
+            using (var vertexShaderByteCode = ShaderBytecode.CompileFromFile("vertexShader.hlsl", "main", "vs_4_0", ShaderFlags.Debug))
+            {
+                vertexShader = new D3D11.VertexShader(d3dDevice, vertexShaderByteCode);
+            }
+            using (var pixelShaderByteCode = ShaderBytecode.CompileFromFile("pixelShader.hlsl", "main", "ps_4_0", ShaderFlags.Debug))
+            {
+                pixelShader = new D3D11.PixelShader(d3dDevice, pixelShaderByteCode);
+            }
+            
+            ///seting up device context
+            d3dDeviceContext.VertexShader.Set(vertexShader);
+            d3dDeviceContext.PixelShader.Set(pixelShader);
+
+            //seting up a topology. that defines how the vertices should be drawn.
+            //https://docs.microsoft.com/en-us/windows/desktop/direct3d11/images/d3d10-primitive-topologies.png
+            d3dDeviceContext.InputAssembler.PrimitiveTopology = PrimitiveTopology.TriangleList;
+        }
 
     }
 }
