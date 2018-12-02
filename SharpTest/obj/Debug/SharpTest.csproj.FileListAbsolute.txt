@@ -1,4 +1,3 @@
-C:\Users\Test\source\repos\SharpTest\SharpTest\obj\Debug\SharpTest.csprojAssemblyReference.cache
 C:\Users\Test\source\repos\SharpTest\SharpTest\obj\Debug\SharpTest.csproj.CoreCompileInputs.cache
 C:\Users\Test\source\repos\SharpTest\SharpTest\bin\Debug\SharpTest.exe.config
 C:\Users\Test\source\repos\SharpTest\SharpTest\bin\Debug\SharpTest.exe
@@ -8,15 +7,12 @@ C:\Users\Test\source\repos\SharpTest\SharpTest\bin\Debug\SharpDX.Desktop.dll
 C:\Users\Test\source\repos\SharpTest\SharpTest\bin\Debug\SharpDX.Direct3D11.dll
 C:\Users\Test\source\repos\SharpTest\SharpTest\bin\Debug\SharpDX.dll
 C:\Users\Test\source\repos\SharpTest\SharpTest\bin\Debug\SharpDX.DXGI.dll
-C:\Users\Test\source\repos\SharpTest\SharpTest\bin\Debug\SharpDX.pdb
-C:\Users\Test\source\repos\SharpTest\SharpTest\bin\Debug\SharpDX.D3DCompiler.pdb
 C:\Users\Test\source\repos\SharpTest\SharpTest\bin\Debug\SharpDX.D3DCompiler.xml
-C:\Users\Test\source\repos\SharpTest\SharpTest\bin\Debug\SharpDX.Desktop.pdb
 C:\Users\Test\source\repos\SharpTest\SharpTest\bin\Debug\SharpDX.Desktop.xml
-C:\Users\Test\source\repos\SharpTest\SharpTest\bin\Debug\SharpDX.Direct3D11.pdb
 C:\Users\Test\source\repos\SharpTest\SharpTest\bin\Debug\SharpDX.Direct3D11.xml
-C:\Users\Test\source\repos\SharpTest\SharpTest\bin\Debug\SharpDX.DXGI.pdb
 C:\Users\Test\source\repos\SharpTest\SharpTest\bin\Debug\SharpDX.DXGI.xml
 C:\Users\Test\source\repos\SharpTest\SharpTest\obj\Debug\SharpTest.csproj.CopyComplete
 C:\Users\Test\source\repos\SharpTest\SharpTest\obj\Debug\SharpTest.exe
 C:\Users\Test\source\repos\SharpTest\SharpTest\obj\Debug\SharpTest.pdb
+C:\Users\Test\source\repos\SharpTest\SharpTest\bin\Debug\SharpDX.xml
+C:\Users\Test\source\repos\SharpTest\SharpTest\obj\Debug\SharpTest.csprojAssemblyReference.cache

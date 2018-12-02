@@ -6,9 +6,6 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharpTest", "SharpTest\SharpTest.csproj", "{1CD99404-5C31-406F-8B67-7E2661171714}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{A8F6F2D3-9D37-4CC4-A7E7-B814841AE8DB}"
-	ProjectSection(SolutionItems) = preProject
-		Class1.cs = Class1.cs
-	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
