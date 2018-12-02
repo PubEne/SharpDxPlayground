@@ -20,3 +20,5 @@ C:\Users\Test\source\repos\SharpTest\SharpTest\bin\Debug\SharpDX.Direct2D1.dll
 C:\Users\Test\source\repos\SharpTest\SharpTest\bin\Debug\SharpDX.Mathematics.dll
 C:\Users\Test\source\repos\SharpTest\SharpTest\bin\Debug\SharpDX.Direct2D1.xml
 C:\Users\Test\source\repos\SharpTest\SharpTest\bin\Debug\SharpDX.Mathematics.xml
+C:\Users\Test\source\repos\SharpTest\SharpTest\bin\Debug\pixelShader.hlsl
+C:\Users\Test\source\repos\SharpTest\SharpTest\bin\Debug\vertexShader.hlsl
